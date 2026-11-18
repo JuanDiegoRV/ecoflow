@@ -1,0 +1,3 @@
+export function LoadingState({ label = 'Cargando…' }: { label?: string }) { return <div className="rounded-2xl bg-white p-6 text-sm text-slate-500 ring-1 ring-slate-200" role="status">{label}</div> }
+export function ErrorState({ message }: { message: string }) { return <div className="rounded-2xl bg-red-50 p-6 text-sm text-red-800" role="alert"><strong>Error:</strong> {message}</div> }
+export function EmptyState({ title, message }: { title: string; message: string }) { return <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-10 text-center"><h3 className="font-semibold text-slate-800">{title}</h3><p className="mt-2 text-sm text-slate-500">{message}</p></div> }

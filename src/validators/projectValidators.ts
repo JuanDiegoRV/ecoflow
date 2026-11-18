@@ -1,0 +1,3 @@
+export interface ProjectFormInput { nombre: string; cliente_nombre: string; direccion: string; potencia_kw: number }
+export function validateProjectInput(input: ProjectFormInput): string[] { const errors: string[] = []; if (!input.nombre.trim()) errors.push('El nombre es obligatorio.'); if (!input.cliente_nombre.trim()) errors.push('El cliente es obligatorio.'); if (!input.direccion.trim()) errors.push('La dirección es obligatoria.'); if (!Number.isFinite(input.potencia_kw) || input.potencia_kw <= 0) errors.push('La potencia debe ser mayor que cero.'); return errors }
+export function validateMaterialQuantity(quantity: number): string | null { return Number.isFinite(quantity) && quantity > 0 ? null : 'La cantidad debe ser mayor que cero.' }
